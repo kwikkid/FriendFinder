@@ -1,169 +1,246 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+	<head>
+		<title>Survey</title>
+		<!-- Latest compiled and minified CSS & JS -->
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	</head>
 
-<head>
-    <title>Survey</title>
-    <!-- Latest compiled and minified CSS & JS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-</head>
+	<body>
+		<div class="container">
+			<div class="jumbotron">
+				<h1 class="display-4">Furry Friend Finder</h1>
+				<p class="lead">
+					Answer the following questions, and we'll match you with a
+					furry friend.
+				</p>
+				<hr class="my-4" />
+				<a class="btn btn-primary btn-lg" href="/" role="button"
+					>Go to Home</a
+				>
+			</div>
+			<form>
+				<div class="form-group">
+					<h2 class="display-5">About You</h2>
+					<label for="exampleFormControlInput1"
+						>Name (Required)</label
+					>
+					<input type="text" class="form-control" id="name" />
+					<label for="exampleFormControlInput1"
+						>Link to Photo Image (Required)</label
+					>
+					<input type="text" class="form-control" id="link" />
+				</div>
+				<hr />
+				<div class="form-group">
+					<h2 class="question-header">Question 1</h2>
+					<h4 class="question">
+						How would you rate your daily energy level?
+					</h4>
+					<!--                 <label for="exampleFormControlSelect1"></label> -->
+					<select class="form-control" id="q1">
+						<option>Select an Option...</option>
+						<option value="1">1(Low Energy)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5(High Energy)</option>
+					</select>
+					<br />
+					<h2 class="question-header">Question 2</h2>
+					<h4 class="question">
+						Generally speaking, you like being surrounded by
+						company.
+					</h4>
+					<!--                 <label for="exampleFormControlSelect1"></label> -->
+					<select class="form-control" id="q2">
+						<option>Select an Option...</option>
+						<option value="1">1(Strongly Disagree)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5(Strongly Agree)</option>
+					</select>
+					<br />
+					<h2 class="question-header">Question 3</h2>
+					<h4 class="question">
+						When you're in a stressful situation, are you likely to
+						get upset?
+					</h4>
+					<select class="form-control" id="q3">
+						<option>Select an Option...</option>
+						<option value="1">1(Strongly Disagree)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5(Strongly Agree)</option>
+					</select>
+					<br />
+					<h2 class="question-header">Question 4</h2>
+					<h4 class="question">
+						Do you like being in the great outdoors?
+					</h4>
+					<select class="form-control" id="q4">
+						<option>Select an Option...</option>
+						<option value="1">1(Strongly Dislike)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5(Strongly Like)</option>
+					</select>
+					<br />
+					<h2 class="question-header">Question 5</h2>
+					<h4 class="question">
+						You're usually the center of attention.
+					</h4>
+					<select class="form-control" id="q5">
+						<option>Select an Option...</option>
+						<option value="1">1(Strongly Disagree)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5(Strongly Agree)</option>
+					</select>
+					<br />
+					<h2 class="question-header">Question 6</h2>
+					<h4 class="question">
+						You like to play it safe and by the rules.
+					</h4>
+					<select class="form-control" id="q6">
+						<option>Select an Option...</option>
+						<option value="1">1(Strongly Disagree)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5(Strongly Agree)</option>
+					</select>
+					<br />
+					<h2 class="question-header">Question 7</h2>
+					<h4 class="question">
+						You enjoy being active (exercising, sports etc.)
+					</h4>
+					<select class="form-control" id="q7">
+						<option>Select an Option...</option>
+						<option value="1">1(Strongly Disagree)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5(Strongly Agree)</option>
+					</select>
+					<br />
+					<h2 class="question-header">Question 8</h2>
+					<h4 class="question">
+						Mutual affection is important to you.
+					</h4>
+					<select class="form-control" id="q8">
+						<option>Select an Option...</option>
+						<option value="1">1(Strongly Disagree)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5(Strongly Agree)</option>
+					</select>
+					<br />
+					<h2 class="question-header">Question 9</h2>
+					<h4 class="question">You're a patient person.</h4>
+					<select class="form-control" id="q9">
+						<option>Select an Option...</option>
+						<option value="1">1(Strongly Disagree)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5(Strongly Agree)</option>
+					</select>
+					<br />
+					<h2 class="question-header">Question 10</h2>
+					<h4 class="question">You're a patient person.</h4>
+					<select class="form-control" id="q10">
+						<option>Select an Option...</option>
+						<option value="1">1(Strongly Disagree)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5(Strongly Agree)</option>
+					</select>
+					<br />
+					<h2 class="question-header">Question 11</h2>
+					<h4 class="question">
+						You care about your physical appearance.
+					</h4>
+					<select class="form-control" id="q11">
+						<option>Select an Option...</option>
+						<option value="1">1(Strongly Disagree)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5(Strongly Agree)</option>
+					</select>
+					<h2 class="question-header">Question 12</h2>
+					<h4 class="question">You're a cuddler</h4>
+					<select class="form-control" id="q12">
+						<option>Select an Option...</option>
+						<option value="1">1(Strongly Disagree)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5(Strongly Agree)</option>
+					</select>
+				</div>
+			</form>
+			<button
+				type="submit"
+				class="btn btn-primary btn-lg btn-block"
+				id="submit"
+			>
+				<i class="fa fa-check-circle" aria-hidden="true"></i> Submit
+			</button>
+			<hr />
 
-<body>
-    <div class="container">
-        <div class="jumbotron">
-            <h1 class="display-4">Furry Friend Finder</h1>
-            <p class="lead">
-                Answer the following questions, and we'll match you with a furry
-                friend.
-            </p>
-            <hr class="my-4" />
-            <a class="btn btn-primary btn-lg" href="/" role="button">Go to Home</a>
-        </div>
-        <form>
-            <div class="form-group">
-            	<h2 class="display-5">About You </h2>
-                <label for="exampleFormControlInput1">Name (Required)</label>
-                <input type="text" class="form-control" id="name">
-                <label for="exampleFormControlInput1">Link to Photo Image (Required)</label>
-                <input type="text" class="form-control" id="link">
-            </div>
-            <hr>
-            <div class="form-group">
-            	 <h2 class="question-header">Question 1</h2>
-            	 <h4 class="question">How would you rate your daily energy level?</h4>
-<!--                 <label for="exampleFormControlSelect1"></label> -->
-                <select class="form-control" id="exampleFormControlSelect1">
-                	<option>Select an Option...</option>
-                    <option value="1">1(Low Energy)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5(High Energy)</option>
-                </select>
-                <br>
-                <h2 class="question-header">Question 2</h2>
-            	<h4 class="question">Generally speaking, you like being surrounded by company.</h4>
-<!--                 <label for="exampleFormControlSelect1"></label> -->
-                <select class="form-control" id="exampleFormControlSelect1">
-                	<option>Select an Option...</option>
-                    <option value="1">1(Strongly Disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5(Strongly Agree)</option>
-                </select>
-                <br>
-                <h2 class="question-header">Question 3</h2>
-            	<h4 class="question">When you're in a stressful situation, are you likely to get upset?</h4>
-				<select class="form-control" id="exampleFormControlSelect1">
-            	 	<option>Select an Option...</option>
-                    <option value="1">1(Strongly Disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5(Strongly Agree)</option>
-                </select>
-                <br>
-                <h2 class="question-header">Question 4</h2>
-            	<h4 class="question">Do you like being in the great outdoors?</h4>
-				<select class="form-control" id="exampleFormControlSelect1">
-            	 	<option>Select an Option...</option>
-                    <option value="1">1(Strongly Dislike)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5(Strongly Like)</option>
-                </select>
-                <br>
-                <h2 class="question-header">Question 5</h2>
-            	<h4 class="question">You're usually the center of attention.</h4>
-				<select class="form-control" id="exampleFormControlSelect1">
-            	 	<option>Select an Option...</option>
-                    <option value="1">1(Strongly Disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5(Strongly Agree)</option>
-                </select>
-                <br>
-                <h2 class="question-header">Question 6</h2>
-            	<h4 class="question">You like to play it safe and by the rules.</h4>
-				<select class="form-control" id="exampleFormControlSelect1">
-            	 	<option>Select an Option...</option>
-                    <option value="1">1(Strongly Disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5(Strongly Agree)</option>
-                </select>
-                <br>
-                <h2 class="question-header">Question 6</h2>
-            	<h4 class="question">You enjoy being active (exercising, sports etc.)</h4>
-				<select class="form-control" id="exampleFormControlSelect1">
-            	 	<option>Select an Option...</option>
-                    <option value="1">1(Strongly Disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5(Strongly Agree)</option>
-                </select>
-				<br>
-                <h2 class="question-header">Question 7</h2>
-            	<h4 class="question">Mutual affection is important to you.</h4>
-				<select class="form-control" id="exampleFormControlSelect1">
-            	 	<option>Select an Option...</option>
-                    <option value="1">1(Strongly Disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5(Strongly Agree)</option>
-                </select>
-                <br>
-                <h2 class="question-header">Question 8</h2>
-            	<h4 class="question">You're a patient person.</h4>
-				<select class="form-control" id="exampleFormControlSelect1">
-            	 	<option>Select an Option...</option>
-                    <option value="1">1(Strongly Disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5(Strongly Agree)</option>
-                </select>
-                <br>
-                <h2 class="question-header">Question 8</h2>
-            	<h4 class="question">You're a patient person.</h4>
-				<select class="form-control" id="exampleFormControlSelect1">
-            	 	<option>Select an Option...</option>
-                    <option value="1">1(Strongly Disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5(Strongly Agree)</option>
-                </select>
-                <br>
-                <h2 class="question-header">Question 9</h2>
-            	<h4 class="question">You care about your physical appearance.</h4>
-				<select class="form-control" id="exampleFormControlSelect1">
-            	 	<option>Select an Option...</option>
-                    <option value="1">1(Strongly Disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5(Strongly Agree)</option>
-                </select>
-                <h2 class="question-header">Question 10</h2>
-            	<h4 class="question">You're a cuddler</h4>
-				<select class="form-control" id="exampleFormControlSelect1">
-            	 	<option>Select an Option...</option>
-                    <option value="1">1(Strongly Disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5(Strongly Agree)</option>
-                </select>                
-            </div>
-</body>
-
+			<footer class="footer">
+				<div class="container">
+					<p>
+						<a href="/api/friends">API Friends List</a> |
+						<a href="https://github.com/kwikkid/friendfinder"
+							>GitHub Repo</a
+						>
+					</p>
+				</div>
+			</footer>
+			<script>
+				//on click event when submitting the form, we want to store all of the users inputs into a variable which then gets pushed into the friendsArray//
+				$("#submit").on("click", function() {
+					console.log("submitted");
+					var userData = {
+						name: $("#name").val(),
+						image: $("#link").val(),
+						scores: [
+							$("#q1").val(),
+							$("#q2").val(),
+							$("#q3").val(),
+							$("#q4").val(),
+							$("#q5").val(),
+							$("#q6").val(),
+							$("#q7").val(),
+							$("#q8").val(),
+							$("#q9").val(),
+							$("#q10").val()
+						]
+					};
+					$.post("/api/friends", userData).then(function(data) {
+						console.log("survey.html", data);
+						alert("Adding you to our database...");
+					});
+				});
+			</script>
+		</div>
+	</body>
 </html>
