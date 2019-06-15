@@ -18,6 +18,10 @@ module.exports = function(app) {
 			var userScore = currentUser.scores[i];
 			console.log("user score " + userScore);
 		}
+		//need to add a way to check each element of the scores array for each element in the friendsData array//
+		//store each element in array as a variable and compare with userScore.
+		//store the total difference between each friend in a variable.
+		//return the best match
 
 		for (var i = 0; i < friendsData.length; i++) {
 			var dbScore = friendsData[i].scores[i];
@@ -27,7 +31,7 @@ module.exports = function(app) {
 			// 	// console.log(difference);
 			// }
 
-			friendsData.push(currentUser);
+			// friendsData.push(currentUser);
 
 			// var bestMatch ={
 			// 	name: "",
