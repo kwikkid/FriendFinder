@@ -226,7 +226,7 @@
         </div>
         <div class="modal-body">
           <h2 id="match-name"></h2>
-          <img id="match-img" src="#" alt="">
+          <img id="match-img" src="#" alt="" width="20%" height="20%">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -257,15 +257,13 @@
 							$("#q12").val()
 						]
 					};
-					$.post("/api/friends", userData), function(data) {
-						console.log("we posted")
-						console.log("Data: " + data);
+					$.post("/api/friends", userData).then(function(data) {
 						//display modal with match name and match image//
 						$("#match-name").text(data.name);
-						console.log("name in response: " + data.name)
-						// $("#match-img").attr("src", data.image);
-						// $("#results-modal").modal("toggle");
-					};
+						$("#match-img").attr("src", data.image);
+						$("#match-img").attr("width", 70);
+						$("#results-modal").modal("toggle");
+					});
 
 
 				});

@@ -3,12 +3,12 @@
 var friendsArray = [
 	{
 		name: "Marutaro",
-		image: "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjTv9TJ5OriAhVjOX0KHezUAtUQjRx6BAgBEAU&url=https%3A%2F%2Fmetropolisjapan.com%2Fmaru%2F&psig=AOvVaw2MlQbj-5HfZO43A96t4aFa&ust=1560663991159419",
+		image: "https://i.imgur.com/cCcmVE4.jpg",
 		scores: [3, 2, 3, 4, 2, 2, 3, 4, 4, 4, 1, 1]
 	},
 	{
-		name: "Euro",
-		image: "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwj2uMXn5OriAhVUCjQIHUlHDy8QjRx6BAgBEAU&url=https%3A%2F%2Fwww.dailymail.co.uk%2Fnews%2Farticle-3822834%2FHappy-hound-Euro-Jack-Russell-t-stop-grinning-making-friends-grasshopper-s-hanging-head.html&psig=AOvVaw1CCvoCA2MSQAKbTM0VdQpc&ust=1560664051606538",
+		name: "Pembroke",
+		image: "https://i.imgur.com/dKWb7oV.png",
 		scores: [2, 5, 1, 5, 3, 3, 5, 3, 4, 5, 4, 4]
 	},
 	{
@@ -23,7 +23,7 @@ var friendsArray = [
 	},
 	{
 		name: "Grumpy Cat",
-		image: "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiz3MaV5eriAhX_HDQIHbnlD8oQjRx6BAgBEAU&url=https%3A%2F%2Fwww.mnn.com%2Ffamily%2Fpets%2Fstories%2Fgrumpy-cat-isnt-so-cranky-after-all&psig=AOvVaw14717YXVk-uWfObHJe8Te8&ust=1560664151584215",
+		image: "https://i.imgur.com/Cxagv.jpg",
 		scores: [1, 1, 3, 2, 2, 1, 2, 2, 1, 1, 2, 4]
 	},
 	{

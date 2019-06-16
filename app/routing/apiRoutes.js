@@ -52,9 +52,6 @@ module.exports = function(app) {
 		console.log(bestMatch)
 		res.json(bestMatch)
 
-		
-        // console.log("the list: " + list)
-        // findMatch(list);
 
     });
     // function findMatch(list) {
