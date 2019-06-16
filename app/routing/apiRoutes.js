@@ -39,6 +39,7 @@ module.exports = function(app) {
             list.push(sumOfDifferences)
   		
         };
+
 		var low = list[0];
 			var indexOfLow;
 			for (var i = 0; i < list.length; i++) {
@@ -52,9 +53,9 @@ module.exports = function(app) {
 		console.log(bestMatch)
 		res.json(bestMatch)
 
-
+	friendsData.push(currentUser);
     });
-    // function findMatch(list) {
+
     	
 
 
@@ -64,4 +65,4 @@ module.exports = function(app) {
 };
 
 
-// friendsData.push(currentUser);
+
