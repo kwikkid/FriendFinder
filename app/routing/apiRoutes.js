@@ -3,42 +3,68 @@ var path = require("path");
 var friendsData = require("../data/friends.js");
 
 module.exports = function(app) {
-	app.get("/api/friends", function(req, res) {
-		res.json(friendsData);
-	});
+    app.get("/api/friends", function(req, res) {
+        res.json(friendsData);
+    });
 
-	app.post("/api/friends", function(req, res) {
-		var currentUser = req.body;
-		currentUser.routeName = currentUser.name
-			.replace(/\s+/g, "")
-			.toLowerCase();
-		console.log(currentUser);
+    app.post("/api/friends", function(req, res) {
+        // console.log(req);
+        var currentUser = req.body;
+        currentUser.routeName = currentUser.name
+            .replace(/\s+/g, "")
+            .toLowerCase();
+        console.log(currentUser);
+        var list = [];
 
-		for (var i = 0; i < currentUser.scores.length; i++) {
-			var userScore = currentUser.scores[i];
-			console.log("user score " + userScore);
-		}
-		//need to add a way to check each element of the scores array for each element in the friendsData array//
-		//store each element in array as a variable and compare with userScore.
-		//store the total difference between each friend in a variable.
-		//return the best match
+        for (var n = 0; n < friendsData.length; n++) {
+        	
+        	var differences = [];
+            var eachFriend = friendsData[n];
+            var sum = 0;
+            // compare scores
+            for (var x = 0; x < eachFriend.scores.length; x++) {
+            	
+                var eachFriendScore = eachFriend.scores[x];
+                var userScore = currentUser.scores[x]
+                //difference between each element of animal vs user score//
+                var eachDifference = Math.abs(userScore - eachFriendScore);
+                //taking that difference and pushing it into an array//
+                differences.push(eachDifference)
+            	var sumOfDifferences = sum += (differences[x]);
 
-		for (var i = 0; i < friendsData.length; i++) {
-			var dbScore = friendsData[i].scores[i];
-			console.log("dbScore" + dbScore);
-			// 	console.log("dbScore: " + dbSCore)
-			// 	// var difference = userScore - dbScore;
-			// 	// console.log(difference);
-			// }
+            };
+            
+            // console.log("the sum: " + sumOfDifferences)
 
-			// friendsData.push(currentUser);
+            list.push(sumOfDifferences)
+  		
+        };
+		var low = list[0];
+			var indexOfLow;
+			for (var i = 0; i < list.length; i++) {
+				if(list[i] < low) {
+					low = list[i];
+				indexOfLow = i;
+				}			
+			}
 
-			// var bestMatch ={
-			// 	name: "",
-			// 	image: "",
-			// 	scores:
-		}
-	});
+		var bestMatch = friendsData[indexOfLow];
+		console.log(bestMatch)
+		res.json(bestMatch)
+
+		
+        // console.log("the list: " + list)
+        // findMatch(list);
+
+    });
+    // function findMatch(list) {
+    	
+
+
+
+
+
 };
-//create two routes//
-// GET route with the url "/ api/friends"  and POST route with "/api/friends"
+
+
+// friendsData.push(currentUser);

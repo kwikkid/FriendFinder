@@ -215,6 +215,26 @@
 					</p>
 				</div>
 			</footer>
+			<div id="results-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h2 class="modal-title"><strong>Your Match</strong></h2>
+        </div>
+        <div class="modal-body">
+          <h2 id="match-name"></h2>
+          <img id="match-img" src="#" alt="">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
 			<script>
 				//on click event when submitting the form, we want to store all of the users inputs into a variable which then gets pushed into the friendsArray//
 				$("#submit").on("click", function() {
@@ -232,13 +252,22 @@
 							$("#q7").val(),
 							$("#q8").val(),
 							$("#q9").val(),
-							$("#q10").val()
+							$("#q10").val(),
+							$("#q11").val(),
+							$("#q12").val()
 						]
 					};
-					$.post("/api/friends", userData).then(function(data) {
-						console.log("survey.html", data);
-						alert("Adding you to our database...");
-					});
+					$.post("/api/friends", userData), function(data) {
+						console.log("we posted")
+						console.log("Data: " + data);
+						//display modal with match name and match image//
+						$("#match-name").text(data.name);
+						console.log("name in response: " + data.name)
+						// $("#match-img").attr("src", data.image);
+						// $("#results-modal").modal("toggle");
+					};
+
+
 				});
 			</script>
 		</div>
